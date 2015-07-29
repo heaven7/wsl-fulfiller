@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'heaven7:wsl-search',
+  name: 'heaven7:wsl-fulfiller',
   version: '0.0.1',
   summary: 'Search package',
-  git: 'https://github.com/heaven7/wsl-search.git',
+  git: 'https://github.com/heaven7/wsl-fulfiller.git',
   documentation: 'README.md'
 });
 
@@ -15,7 +15,7 @@ Package.onUse(function(api) {
     api.imply(['heaven7:wsl-core']);
 
     api.addFiles([
-        'lib/both/wsl-search.js'
+        'lib/both/wsl-fulfiller.js'
     ], both);
 
     api.addFiles([

@@ -1,12 +1,20 @@
-<template name="fullfiller">
-   <input type="text" id="search-box">
+q<template name="fulfiller">
+   <select id="fulfill-type">
+       <option value="offer">Offer</option>
+       <option value="need">Need</option>
+       <option value="wish">Wish</option>
+   </select>
+   <input type="text" id="fulfill-box">
+    <button id="fulfill-submit" type="submit">&#10084;</button>
     {{#if results}}
-        <h4>Result ({{entryCount}} entries)</h4>
-        <ul>
-            {{#each results}}
-                <li>{{title}}</li>
-            {{/each}}
-        </ul>
+        <div id="results">
+            <h4>Result ({{entryCount}} entries)</h4>
+            <ul>
+                {{#each results}}
+                    <li>{{title}}</li>
+                {{/each}}
+            </ul>
+        </div>
     {{/if}}
 
 </template>
