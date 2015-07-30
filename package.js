@@ -11,7 +11,7 @@ both = ['client','server'];
 Package.onUse(function(api) {
     api.versionsFrom('1.1.0.2');
 
-    api.use(['heaven7:wsl-core'], both);
+    api.use(['heaven7:wsl-core@0.0.1'], both);
     api.imply(['heaven7:wsl-core']);
 
     api.addFiles([
