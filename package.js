@@ -11,7 +11,11 @@ both = ['client','server'];
 Package.onUse(function(api) {
     api.versionsFrom('1.1.0.2');
 
-    api.use(['heaven7:wsl-core@0.0.1'], both);
+    api.use([
+        'heaven7:wsl-core@0.0.1',
+        'meteorhacks:npm'
+    ], both);
+
     api.imply(['heaven7:wsl-core']);
 
     api.addFiles([
@@ -23,4 +27,13 @@ Package.onUse(function(api) {
         'lib/client/templates.js'
     ], 'client');
 
+    api.addFiles([
+        'lib/server/elasticsearch.js',
+        'lib/server/wsl-items.js'
+    ], 'server');
+
+});
+
+Npm.depends({
+    'elasticsearch': '3.0.2'
 });
