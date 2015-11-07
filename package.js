@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-fulfiller',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Search package',
   git: 'https://github.com/heaven7/wsl-fulfiller.git',
   documentation: 'README.md'
@@ -12,8 +12,8 @@ Package.onUse(function(api) {
     api.versionsFrom('1.1.0.2');
 
     api.use([
-        'heaven7:wsl-core@0.0.1',
-        'meteorhacks:npm'
+        'heaven7:wsl-core@0.0.2',
+        'bigdata:elasticsearch'
     ], both);
 
     api.imply(['heaven7:wsl-core']);
