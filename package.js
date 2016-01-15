@@ -9,10 +9,10 @@ Package.describe({
 both = ['client','server'];
 
 Package.onUse(function(api) {
-    api.versionsFrom('1.1.0.2');
+    api.versionsFrom('1.2');
 
     api.use([
-        'heaven7:wsl-core@0.0.2',
+        'heaven7:wsl-core@0.0.3_1',
         'bigdata:elasticsearch'
     ], both);
 
