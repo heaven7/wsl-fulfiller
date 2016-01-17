@@ -1,39 +1,36 @@
 Package.describe({
   name: 'heaven7:wsl-fulfiller',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'Search package',
   git: 'https://github.com/heaven7/wsl-fulfiller.git',
   documentation: 'README.md'
-});
+})
 
-both = ['client','server'];
+const both = ['client','server'],
+    packages = [
+        'heaven7:wsl-core@0.0.3_1',
+        'easy:search@2.0.5',
+        'easysearch:components@2.0.5',
+        'easysearch:elasticsearch@2.0.3',
+        'easysearch:autosuggest@2.0.6'
+    ]
 
 Package.onUse(function(api) {
-    api.versionsFrom('1.2');
-
-    api.use([
-        'heaven7:wsl-core@0.0.3_1',
-        'bigdata:elasticsearch'
-    ], both);
-
-    api.imply(['heaven7:wsl-core']);
+    api.versionsFrom('1.2')
+    api.use(packages, both)
+    api.imply(packages)
 
     api.addFiles([
         'lib/both/wsl-fulfiller.js'
-    ], both);
+    ], both)
 
     api.addFiles([
         'lib/client/templates.html',
         'lib/client/templates.js'
-    ], 'client');
+    ], 'client')
 
     api.addFiles([
-        'lib/server/elasticsearch.js',
         'lib/server/wsl-items.js'
-    ], 'server');
+    ], 'server')
 
-});
-
-Npm.depends({
-    'elasticsearch': '3.0.2'
-});
+})
