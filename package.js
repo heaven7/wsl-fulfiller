@@ -30,7 +30,6 @@ Package.onUse(function(api) {
     ], 'client')
 
     api.addFiles([
-        'lib/server/wsl-items.js'
     ], 'server')
 
 })

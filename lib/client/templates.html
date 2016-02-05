@@ -1,20 +1,34 @@
 <template name="fulfiller">
-   <select id="fulfill-type">
-       <option value="offer">Offer</option>
-       <option value="need">Need</option>
-       <option value="wish">Wish</option>
-   </select>
-   <input type="text" id="fulfill-box">
-    <button id="fulfill-submit" type="submit">&#10084;</button>
-    {{#if results}}
-        <div id="results">
-            <h4>Result ({{entryCount}} entries)</h4>
-            <ul>
-                {{#each results}}
-                    <li>{{title}}</li>
-                {{/each}}
-            </ul>
+    <form class="ui large form">
+        <div class="two fields">
+            <div class="two wide field">
+                <select id="fulfill-type" class="ui fluid dropdown">
+                    <option value="offer">{{_ 'offer'}}</option>
+                    <option value="need">{{_ 'need'}}</option>
+                    <option value="wish">{{_ 'wish'}}</option>
+                </select>
+            </div>
+            <div class="nine wide field">
+                {{> search class="fulfiller" url=url icon="heart"}}
+            </div>
         </div>
-    {{/if}}
+        <div class="three wide field">
+            <div class="fields">
+                <div class="field">
+                    {{range}}
+                </div>
+                <div class="ten wide field">
+                    <input id="range" type="range" min="0" max="50" step="5" value="{{range}}" placeholder="{{_ 'distance'}}">
+                </div>
+                <div class="one wide field">
+                    <select id="measure" class="ui fluid dropdown">
+                        <option value="m">{{_ 'm'}}</option>
+                        <option value="km">{{_ 'km'}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
 
 </template>
