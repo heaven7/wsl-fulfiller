@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-fulfiller',
-  version: '0.0.3_1',
+  version: '0.0.3_2',
   summary: 'Search package',
   git: 'https://github.com/heaven7/wsl-fulfiller.git',
   documentation: 'README.md'
