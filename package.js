@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-fulfiller',
-  version: '0.0.3',
+  version: '0.0.3_1',
   summary: 'Search package',
   git: 'https://github.com/heaven7/wsl-fulfiller.git',
   documentation: 'README.md'
@@ -12,7 +12,9 @@ const both = ['client','server'],
         'easy:search@2.0.5',
         'easysearch:components@2.0.5',
         'easysearch:elasticsearch@2.0.3',
-        'easysearch:autosuggest@2.0.6'
+        'easysearch:autosuggest@2.0.6',
+        'ecmascript',
+        'es5-shim'
     ]
 
 Package.onUse(function(api) {
@@ -24,12 +26,9 @@ Package.onUse(function(api) {
         'lib/both/wsl-fulfiller.js'
     ], both)
 
-    api.addFiles([
+    api.addAssets([
         'lib/client/templates.html',
         'lib/client/templates.js'
     ], 'client')
-
-    api.addFiles([
-    ], 'server')
 
 })
