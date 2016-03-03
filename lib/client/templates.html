@@ -3,13 +3,16 @@
         <div class="two fields">
             <div class="two wide field">
                 <select id="fulfill-type" class="ui fluid dropdown">
-                    <option value="offer">{{_ 'offer'}}</option>
-                    <option value="need">{{_ 'need'}}</option>
-                    <option value="wish">{{_ 'wish'}}</option>
+                    {{#each items}}
+                        <option value="{{value}}">{{label}}</option>
+                    {{/each}}
                 </select>
             </div>
             <div class="nine wide field">
-                {{> search class="fulfiller" url=url icon="heart"}}
+                {{#if semanticUi}}
+                    {{> search class="fulfiller" url=url icon="heart"}}
+                {{else}}
+                {{/if}}
             </div>
         </div>
         <div class="three wide field">
@@ -29,6 +32,4 @@
             </div>
         </div>
     </form>
-
-
 </template>
