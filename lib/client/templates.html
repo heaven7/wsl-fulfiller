@@ -3,6 +3,7 @@
         <div class="two fields">
             <div class="two wide field">
                 <select id="fulfill-type" class="ui fluid dropdown">
+                    <option value="">{{_ 'choose'}}</option>
                     {{#each items}}
                         <option value="{{value}}">{{label}}</option>
                     {{/each}}
@@ -10,7 +11,7 @@
             </div>
             <div class="nine wide field">
                 {{#if semanticUi}}
-                    {{> search class="fulfiller" url=url icon="heart"}}
+                    {{> search id="searchtext" url=url icon="heart"}}
                 {{else}}
                 {{/if}}
             </div>
